@@ -1,0 +1,19 @@
+# ---------- Core ----------
+fastapi
+uvicorn
+pydantic
+
+# ---------- ML / Data ----------
+numpy
+pandas
+scikit-learn
+joblib
+
+# ---------- Image ML ----------
+tensorflow==2.15.0
+opencv-python
+pillow
+scipy
+
+# ---------- Utilities ----------
+python-multipart
