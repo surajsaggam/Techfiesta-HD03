@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Help & Support – AI Health</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-container">
+    <h1 class="logo">AI Health</h1>
+    <div class="header-actions">
+      <button class="header-btn" onclick="location.href='information.html'">Information</button>
+      <button class="header-btn" onclick="location.href='help.html'">Help</button>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="info">
+    <div class="info-box">
+
+      <h2>
+        Need <span>Help?</span>
+      </h2>
+
+      <p>
+        If you are facing any issues while using the AI Health platform or have
+        questions regarding the predictions, you can share your concern below.
+      </p>
+
+      <form class="form-fields" onsubmit="handleHelpSubmit(event)">
+        <div class="form-group">
+          <label>Your Issue</label>
+          <textarea rows="5" placeholder="Describe your problem or question..." required></textarea>
+        </div>
+
+        <button type="submit" class="primary-btn">
+          Submit Request
+        </button>
+      </form>
+
+      <p class="form-note">
+        Our team will review your query. This is a demo support system.
+      </p>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  AI Health Support – Demo Version
+</footer>
+
+<script>
+  function handleHelpSubmit(e) {
+    e.preventDefault();
+    alert("Your request has been submitted (demo).");
+  }
+</script>
+
+</body>
+</html>

@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Select Disease</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Details</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h2>Select Disease</h2>
+  <!-- Header -->
+<header class="header">
+  <div class="header-container">
+    <h1 class="logo">AI Health</h1>
 
-  <!-- Content will be added here -->
+    <div class="header-actions">
+      <button class="header-btn" onclick="window.location.href='information.html'">
+  Information
+</button>
+
+<button class="header-btn" onclick="window.location.href='help.html'">
+  Help
+</button>
+
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main -->
+  <main class="main form-main">
+
+    <!-- Title -->
+    <div class="title-section">
+      <h2 id="form-title">Disease Risk Assessment</h2>
+      <p id="form-subtitle"></p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="form-card">
+      <form id="disease-form">
+        <div id="form-fields" class="form-fields"></div>
+
+        <button type="submit" class="primary-btn">
+          Predict Risk
+        </button>
+      </form>
+    </div>
+
+    <p class="form-note">
+      Your data is processed securely and used only for risk assessment purposes.
+    </p>
+
+  </main>
 
   <script src="script.js"></script>
 </body>

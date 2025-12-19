@@ -2,21 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AI Disease Detection</title>
-
-  <!-- Link CSS -->
+  <title>AI-Based Early Disease Detection</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>AI-Based Early Disease Detection</h1>
-    <p>Select a disease and get early prediction using AI.</p>
+  <!-- header -->
+<header class="header">
+  <div class="header-container">
+    <h1 class="logo">AI Health</h1>
 
-    <button onclick="goToSelect()">Start Diagnosis</button>
+    <div class="header-actions">
+      <button class="header-btn" onclick="window.location.href='information.html'">
+  Information
+</button>
+
+<button class="header-btn" onclick="window.location.href='help.html'">
+  Help
+</button>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>AI-Powered<br>Early Diagnostics.</h1>
+
+    <p class="hero-stat">
+      <span>⚡</span> Revolutionizing early disease detection using AI-driven analysis.
+    </p>
+
+    <p class="hero-desc">
+      Precise. Preventive. Intelligent healthcare decisions powered by machine learning.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="primary-btn" onclick="goToSelect()">Start Diagnosis</button>
+      <!-- <button class="secondary-btn">Learn More</button> -->
+    </div>
   </div>
 
-  <!-- Link JS -->
+  <div class="hero-image">
+   <img src="images/heartimage.jpeg" alt="AI heart visualization">
+
+    <div class="hero-image-overlay"></div>
+  </div>
+</section>
+
+  <!-- INFO SECTION -->
+  <section class="info">
+    <div class="info-box">
+      <h2>
+        We empower healthcare systems to make
+        <span>faster</span>, <span>smarter</span> decisions.
+      </h2>
+
+      <p>
+        Our AI models analyze symptoms and health indicators to assist
+        in early detection, improving patient outcomes and preventive care.
+      </p>
+
+<button class="secondary-btn" onclick="window.location.href='learnmore.html'">
+  Learn More
+</button>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <h2>How It Works</h2>
+
+    <div class="how-steps">
+      <div class="how-card">
+        <h3>01</h3>
+        <p>Enter health symptoms and basic indicators</p>
+      </div>
+
+      <div class="how-card">
+        <h3>02</h3>
+        <p>AI analyzes patterns using ML models</p>
+      </div>
+
+      <div class="how-card">
+        <h3>03</h3>
+        <p>Get early risk insights and recommendations</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    This tool provides preliminary insights and is not a medical diagnosis.
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -2,15 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Select Disease</title>
+  <title>Upload Medical Image | AI Health</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Shared CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h2>Select Disease</h2>
+  <!-- HEADER -->
+<header class="header">
+  <div class="header-container">
+    <h1 class="logo">AI Health</h1>
 
-  <!-- Content will be added here -->
+    <div class="header-actions">
+      <button class="header-btn" onclick="window.location.href='information.html'">
+  Information
+</button>
 
+<button class="header-btn" onclick="window.location.href='help.html'">
+  Help
+</button>
+
+    </div>
+  </div>
+</header>
+
+
+  <!-- MAIN -->
+  <main class="upload-container">
+
+    <!-- TITLE -->
+    <div class="upload-title">
+      <h1>Upload Medical Image</h1>
+      <p>Upload a clear medical image for AI-based analysis</p>
+    </div>
+
+    <!-- UPLOAD CARD -->
+    <div class="upload-card">
+      <div 
+        class="upload-dropzone"
+        id="dropzone"
+      >
+        <input
+          type="file"
+          id="fileInput"
+          accept="image/jpeg,image/png,image/jpg"
+          hidden
+        >
+
+        <!-- DEFAULT STATE -->
+        <div id="uploadPrompt">
+          <div class="upload-icon">⬆</div>
+          <p class="upload-main-text">
+            Drag & drop image here or click to browse
+          </p>
+          <p class="upload-sub-text">
+            JPG, PNG, JPEG (max 5MB)
+          </p>
+        </div>
+
+        <!-- PREVIEW STATE -->
+        <div id="previewContainer" class="hidden">
+          <img id="previewImage" alt="Preview">
+          <p id="fileName" class="file-name"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="upload-actions hidden" id="actionButtons">
+      <button class="primary-btn" id="analyzeBtn">
+        Analyze Image
+      </button>
+      <button class="secondary-btn" id="changeBtn">
+        Change Image
+      </button>
+    </div>
+
+    <!-- STATUS -->
+    <div class="upload-status hidden" id="statusBox">
+      <span class="loader"></span>
+      <p>Analyzing image using AI model...</p>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="upload-disclaimer">
+      <p>
+        <strong>Disclaimer:</strong> This analysis provides decision support and is not a medical diagnosis.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Shared JS -->
   <script src="script.js"></script>
 </body>
 </html>

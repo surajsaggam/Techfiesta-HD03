@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Select Disease</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Diagnosis Result | AI Health</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h2>Select Disease</h2>
+<!-- NAVBAR -->
+<header class="header">
+  <div class="header-container">
+    <h1 class="logo">AI Health</h1>
 
-  <!-- Content will be added here -->
+    <div class="header-actions">
+      <button class="header-btn" onclick="window.location.href='information.html'">
+  Information
+</button>
 
-  <script src="script.js"></script>
+<button class="header-btn" onclick="window.location.href='help.html'">
+  Help
+</button>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- MAIN -->
+<main class="result-container">
+
+  <div class="result-header">
+    <h1>Diagnosis Result</h1>
+    <p>AI-based analysis outcome</p>
+  </div>
+
+  <!-- RESULT CARD -->
+  <div class="result-card">
+
+    <div id="riskIcon" class="risk-icon"></div>
+    
+    <h2 id="diseaseName"></h2>
+
+    <span id="riskBadge" class="risk-badge"></span>
+
+    <p class="confidence">
+      Confidence: <span id="confidenceScore"></span>%
+    </p>
+
+    <div class="section">
+      <h3>Analysis Summary</h3>
+      <p id="explanation"></p>
+    </div>
+
+    <div class="section">
+      <h3>Key Indicators Used</h3>
+      <ul id="indicatorsList"></ul>
+    </div>
+
+    <div class="action-buttons">
+      <button class="primary-btn" onclick="startNewDiagnosis()">Start New Diagnosis</button>
+      <button class="secondary-btn" onclick="goBack()">Go Back</button>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    ⚠️ This is an AI-assisted prediction and not a medical diagnosis.
+    Please consult a healthcare professional.
+  </p>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About AI Health</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER (same as other pages) -->
+<header class="header">
+  <div class="header-container">
+    <h1 class="logo">AI Health</h1>
+    <div class="header-actions">
+      <button class="header-btn">Information</button>
+      <button class="header-btn">Help</button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <section class="info">
+    <div class="info-box">
+
+      <h2>
+        About <span>AI Health</span>
+      </h2>
+
+      <p>
+        AI Health is an AI-powered early disease risk assessment platform designed
+        to assist users in identifying potential health risks at an early stage.
+        The system leverages machine learning models trained on publicly available
+        medical datasets to analyze symptoms, health indicators, and medical images.
+      </p>
+
+      <p>
+        The primary objective of this project is not to replace medical professionals,
+        but to act as a <strong>decision-support tool</strong> that encourages early
+        diagnosis and timely medical consultation.
+      </p>
+
+      <h3 class="learn-subheading">How the System Works</h3>
+
+      <p>
+        Depending on the selected disease, the platform follows two approaches:
+      </p>
+
+      <ul class="learn-list">
+        <li>
+          <strong>Form-based analysis:</strong> For conditions such as diabetes,
+          heart disease, and liver disease, users enter relevant health parameters
+          like age, glucose level, BMI, and blood pressure.
+        </li>
+        <li>
+          <strong>Image-based analysis:</strong> For conditions such as skin cancer,
+          brain tumors, and tuberculosis, users upload medical images that are
+          analyzed using deep learning models.
+        </li>
+      </ul>
+
+      <h3 class="learn-subheading">Technology & Approach</h3>
+
+      <p>
+        The backend is designed using modern APIs to process user input and interact
+        with trained machine learning models. The frontend provides a clean,
+        intuitive interface to ensure ease of use and accessibility.
+      </p>
+
+      <p>
+        Predictions are presented as <strong>risk insights</strong> with confidence
+        scores and explanations, allowing users to understand the outcome clearly.
+      </p>
+
+      <h3 class="learn-subheading">Ethical Considerations</h3>
+
+      <p>
+        AI Health follows responsible AI principles. All predictions are shown as
+        preliminary insights and not as confirmed diagnoses. No personal data is
+        stored permanently, and patient privacy is prioritized.
+      </p>
+
+      <div style="margin-top: 40px;">
+        <button class="primary-btn" onclick="window.location.href='index.html'">
+          Back to Home
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  This tool provides preliminary insights and is not a medical diagnosis.
+</footer>
+
+</body>
+</html>

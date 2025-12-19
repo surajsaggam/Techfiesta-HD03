@@ -1,16 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Select Disease</title>
+
+  <!-- Global CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h2>Select Disease</h2>
+  <!-- Header -->
+<header class="header">
+  <div class="header-container">
+    <h1 class="logo">AI Health</h1>
 
-  <!-- Content will be added here -->
+    <div class="header-actions">
+      <button class="header-btn" onclick="window.location.href='information.html'">
+  Information
+</button>
 
+<button class="header-btn" onclick="window.location.href='help.html'">
+  Help
+</button>
+
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main -->
+  <main class="main">
+    <div class="title-section">
+      <h2>Select Disease</h2>
+      <p>Choose a condition to begin your medical analysis</p>
+    </div>
+
+    <!-- Disease Grid -->
+    <div class="disease-grid">
+
+      <div class="disease-card" data-disease="skin-cancer" data-page="upload.html">
+        <div class="icon-circle">🩺</div>
+        <h3>Skin Cancer</h3>
+        <p>Detect abnormal skin lesions and melanoma</p>
+      </div>
+
+      <div class="disease-card" data-disease="brain-tumor" data-page="upload.html">
+        <div class="icon-circle">🧠</div>
+        <h3>Brain Tumor</h3>
+        <p>Identify brain abnormalities and tumors</p>
+      </div>
+
+      <div class="disease-card" data-disease="tuberculosis" data-page="upload.html">
+        <div class="icon-circle">🫁</div>
+        <h3>Tuberculosis</h3>
+        <p>Diagnose respiratory TB infections</p>
+      </div>
+
+      <div class="disease-card" data-disease="diabetes" data-page="form.html">
+        <div class="icon-circle">🩸</div>
+        <h3>Diabetes</h3>
+        <p>Monitor blood glucose and diabetes risk</p>
+      </div>
+
+      <div class="disease-card" data-disease="heart-disease" data-page="form.html">
+        <div class="icon-circle">❤️</div>
+        <h3>Heart Disease</h3>
+        <p>Assess cardiovascular health conditions</p>
+      </div>
+
+      <div class="disease-card" data-disease="liver-disease" data-page="form.html">
+        <div class="icon-circle">🧬</div>
+        <h3>Liver Disease</h3>
+        <p>Evaluate liver function and damage</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global JS -->
   <script src="script.js"></script>
 </body>
 </html>
