@@ -30,6 +30,18 @@ train_generator = train_datagen.flow_from_directory(
     class_mode="categorical"
 )
 
+print("CLASS INDICES USED DURING TRAINING:")
+print(train_generator.class_indices)
+
+
+import json
+
+with open("class_indices.json", "w") as f:
+    json.dump(train_generator.class_indices, f)
+
+print("Class indices:", train_generator.class_indices)
+
+
 test_generator = test_datagen.flow_from_directory(
     test_dir,
     target_size=IMG_SIZE,

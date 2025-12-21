@@ -4,10 +4,11 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
+import json
 
-app = FastAPI()
+app = FastAPI(title="Brain Tumor Prediction API")
 
-# Allow frontend access
+# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,12 +20,12 @@ app.add_middleware(
 # Load model
 model = tf.keras.models.load_model("brain_tumor_model.h5")
 
-CLASS_NAMES = [
-    "glioma_tumor",
-    "meningioma_tumor",
-    "no_tumor",
-    "pituitary_tumor"
-]
+# Load correct class mapping
+with open("class_indices.json", "r") as f:
+    class_indices = json.load(f)
+
+# Reverse mapping: index → class name
+index_to_class = {v: k for k, v in class_indices.items()}
 
 def preprocess_image(image_bytes):
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
@@ -36,12 +37,12 @@ def preprocess_image(image_bytes):
 @app.post("/predict-image")
 async def predict_image(file: UploadFile = File(...)):
     image_bytes = await file.read()
-    processed_image = preprocess_image(image_bytes)
+    img = preprocess_image(image_bytes)
 
-    predictions = model.predict(processed_image)
-    confidence = float(np.max(predictions))
-    class_index = int(np.argmax(predictions))
-    predicted_class = CLASS_NAMES[class_index]
+    preds = model.predict(img)[0]
+    class_index = int(np.argmax(preds))
+    confidence = float(np.max(preds))
+    predicted_class = index_to_class[class_index]
 
     return {
         "disease": "Brain Tumor",

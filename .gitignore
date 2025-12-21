@@ -1,4 +1,4 @@
-# Python cache
+# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -8,10 +8,10 @@ __pycache__/
 venv/
 .env/
 
+# ML models (OPTIONAL – keep if repo size allows)
+# *.h5
+# *.pkl
+
 # OS files
 .DS_Store
 Thumbs.db
-
-# ML models (optional – uncomment if size is an issue)
-# *.h5
-# *.joblib
