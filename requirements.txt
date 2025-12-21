@@ -8,6 +8,7 @@ numpy
 pandas
 scikit-learn
 joblib
+xgboost
 
 # ---------- Image ML ----------
 tensorflow==2.15.0
