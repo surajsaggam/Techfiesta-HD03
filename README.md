@@ -1,62 +1,33 @@
-AI Based Early Disease Detection
+AI-Based Early Disease Detection System
 
-Techfiesta-HD03/
-│
-├── frontend/
-│   ├── index.html              # Home page
-│   ├── select.html             # Disease selection page
-│   ├── upload.html             # Image upload page
-│   ├── form.html               # Form-based input page
-│   ├── result.html             # Prediction result page
-│   ├── information.html        # Disease information
-│   ├── help.html               # Help & support page
-│   ├── style.css               # Global styles
-│   ├── script.js               # Frontend logic & API calls
-│   └── images/                 # UI images/icons
-│
-├── backend/
-│   ├── heart_disease_api/
-│   │   ├── main.py
-│   │   └── heart_pipeline.joblib
-│   │
-│   ├── brain_tumor_api/
-│   │   ├── main.py
-│   │   ├── brain_tumor_model.h5
-│   │   └── class_indices.json
-│   │
-│   ├── skin_cancer_api/
-│   │   ├── main.py
-│   │   └── skin_cancer_model.h5
-│   │
-│   ├── tuberculosis_api/
-│   │   ├── main.py
-│   │   └── tb_model.h5
-│   │
-│   └── liver_disease_api/
-│       ├── main.py
-│       ├── liver_xgb_model.pkl
-│       └── liver_scaler.pkl
-│
-├── ml/
-│   ├── heart_disease/
-│   │   ├── train.py
-│   │   └── dataset/
-│   │
-│   ├── brain_tumor/
-│   │   ├── train.py
-│   │   └── dataset/
-│   │
-│   ├── skin_cancer/
-│   │   └── dataset/
-│   │
-│   ├── tuberculosis/
-│   │   └── dataset/
-│   │
-│   └── liver_disease/
-│       ├── train.py
-│       └── dataset/
-│
-├── start_all_apis.bat           # One-click backend startup (Windows)
-├── requirements.txt             # Python dependencies
-├── .gitignore
-└── README.md
+An AI-powered healthcare application designed to assist in the early detection of multiple diseases using Machine Learning and Deep Learning models. The system analyzes medical images and patient health data to generate predictions and risk assessments through an interactive web interface.
+
+🚀 Features
+Early disease prediction using AI/ML models
+Detection modules for:
+Heart Disease
+Brain Tumor
+Skin Cancer
+Tuberculosis
+Liver Disease
+Real-time prediction through FastAPI integration
+User-friendly frontend for image uploads and form-based inputs
+Disease information and support pages
+Modular backend architecture for scalability
+
+🛠️ Tech Stack
+Frontend
+HTML
+CSS
+JavaScript
+Backend
+FastAPI
+Python
+Machine Learning & Deep Learning
+Scikit-learn
+TensorFlow / Keras
+XGBoost
+Data Processing
+NumPy
+Pandas
+Pillow
