@@ -1,6 +1,6 @@
 AI-Based Early Disease Detection System
 
-An AI-powered healthcare application designed to assist in the early detection of multiple diseases using Machine Learning and Deep Learning models. The system analyzes medical images and patient health data to generate predictions and risk assessments through an interactive web interface.
+An AI-powered healthcare application designed to assist in the early detection of multiple diseases using Machine Learning and Deep Learning models. The system analyzes medical images and patient health data to generate predictions and risk assessments through an interactive web interfaces.
 
 🚀 Features
 Early disease prediction using AI/ML models
